@@ -1,0 +1,1 @@
+{"cpp": "cd $dir && g++ -std=c++17 $fileName -o solve && ./solve > out"}
