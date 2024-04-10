@@ -15,6 +15,17 @@ int main() {
     int ttt;
     cin >> ttt;
     while(ttt--) {
+        int n;
+        vector<int> ans;
+        cin >> n;
+        for (int i = 1; i <= n; i++) {
+            ans.push_back(i);
+            ans.push_back(n - i + 1);
+        }
+        for (int i = 0; i < n; i++) {
+            cout << ans[i] << " ";
+        }
+        cout << endl;
         
     }
 

@@ -96,6 +96,23 @@ vector<int> divide(vector<int> & A, int b) {
     return C;
 }
 
-// ------------------------乘法 end
 
-/
+vector<int> div(vector<int>& A, vector<int>& B, int& rem) {
+    int b = 0;
+    for (int i = B.size() - 1; i >= 0; i--) {
+        b = b * 10 + B[i];
+    }
+    vector<int> ans;
+    for (int i = A.size() - 1; i >= 0; i--) {
+        int x = rem * 10 + A[i];
+        ans.push_back(x / b);
+        rem = x % b;
+    }
+    reverse(ans.begin(), ans.end());
+    while(ans.size() > 1 && ans.back() == 0) ans.pop_back();
+    return ans;
+}
+
+
+// ------------------------除法 end
+

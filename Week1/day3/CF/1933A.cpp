@@ -15,6 +15,15 @@ int main() {
     int ttt;
     cin >> ttt;
     while(ttt--) {
+        int sum = 0;
+        int n;
+        cin >> n;
+        for (int i = 0; i < n; i++) {
+            int t;
+            cin >> t;
+            sum += abs(t);
+        }
+        cout << sum << endl;
         
     }
 
